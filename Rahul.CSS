@@ -1,0 +1,382 @@
+/* Rahul.css — Apple glass + cyan glow premium style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:"Poppins",sans-serif;
+}
+
+:root{
+  --accent: rgba(0,230,230,0.95);
+  --glass-bg: rgba(255,255,255,0.12);
+  --glass-border: rgba(255,255,255,0.22);
+  --text: #ffffff;
+}
+
+/* ---------- PAGE BACKGROUND ---------- */
+body{
+  background:
+    linear-gradient(180deg, rgba(10,15,25,0.55), rgba(6,10,18,0.65)),
+    url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1800&q=80')
+    center/cover fixed no-repeat;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+/* ---------- NAV ---------- */
+.glass-nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1200;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 48px;
+  background: var(--glass-bg);
+  border-bottom:1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(120%);
+  transition:0.28s ease;
+}
+.nav-left .logo{font-weight:600; letter-spacing:0.6px}
+.nav-links a{
+  color:var(--text);
+  margin-left:22px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.2s;
+}
+.nav-links a:hover{
+  color:var(--accent);
+  text-shadow:0 0 12px rgba(0,230,230,0.12);
+}
+.nav-shadow{
+  box-shadow:0 14px 40px rgba(3,7,12,0.45);
+  background: rgba(255,255,255,0.17);
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-top:90px;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  opacity:0.18;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+  z-index:1;
+}
+.hero-card{
+  position:relative;
+  z-index:5;
+  max-width:760px;
+  width:90%;
+  text-align:center;
+  padding:36px;
+  background: var(--glass-bg);
+  border-radius:18px;
+  border:1px solid var(--glass-border);
+  backdrop-filter: blur(20px) saturate(120%);
+  box-shadow:0 8px 30px rgba(0,255,255,0.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.hero-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,255,255,0.12);
+}
+.hero-avatar{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,0.7);
+  object-fit:cover;
+}
+.hero-main{font-size:36px;margin-top:12px}
+.hero-typewriter{font-size:17px;margin-top:12px;min-height:28px}
+
+/* ---------- BUTTONS ---------- */
+.hero-cta{margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  padding:10px 26px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  border:1px solid rgba(255,255,255,0.24);
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+  transition:all .22s;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 20px var(--accent);
+}
+.btn.ghost{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.14);
+}
+
+/* ---------- HERO STATS ---------- */
+.hero-stats{margin-top:22px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-weight:700}
+.stat-label{font-size:12px;opacity:0.85}
+
+/* ---------- SECTIONS ---------- */
+.section{
+  width:90%;
+  max-width:1100px;
+  margin:86px auto;
+}
+.section-title{
+  font-size:30px;
+  margin-bottom:18px;
+  text-align:center;
+}
+
+/* ---------- GLASS CARD ---------- */
+.glass-card{
+  padding:22px;
+  border-radius:14px;
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  transition:0.35s;
+  box-shadow:0 6px 22px rgba(0,255,255,0.06);
+}
+.glass-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,255,255,0.12);
+}
+
+/* ---------- SKILLS ---------- */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+.skill-card{padding:18px}
+.skill-head{display:flex;justify-content:space-between;margin-bottom:10px}
+.skill-bar{
+  height:10px;
+  background:rgba(255,255,255,0.06);
+  border-radius:8px;
+}
+.skill-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--accent), rgba(0,200,255,0.7));
+  border-radius:8px;
+  transition:width 1s cubic-bezier(.2,.9,.2,1);
+}
+/* ---------- LANGUAGES SECTION ---------- */
+.languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.language-card {
+  padding: 26px 30px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.lang-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.lang-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background: rgba(255,255,255,0.12);
+}
+
+.lang-icon.blue {
+  color: var(--accent);
+}
+
+.lang-icon.green {
+  color: #7CFF9E;
+}
+
+.language-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.language-card p {
+  margin-top: 4px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+/* ---------- PROJECTS ---------- */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:22px;
+}
+.project-card{cursor:pointer;overflow:hidden}
+.project-thumb{height:190px;background-size:cover;background-position:center}
+.project-info{padding:18px}
+/* ---------- PROJECTS : COMING SOON (FIXED) ---------- */
+
+.projects-coming {
+  width: 100%;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 80px 0;
+  color: rgba(255,255,255,0.9);
+}
+
+
+
+/* ---------- MODAL ---------- */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.45);
+  z-index:2200;
+}
+.modal.show{display:flex}
+
+/* ---------- CONTACT (NEW CARD DESIGN) ---------- */
+.contact-section{text-align:center}
+.contact-subtext{
+  max-width:640px;
+  margin:12px auto 52px;
+  font-size:.95rem;
+  color:rgba(255,255,255,.75);
+}
+.contact-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:26px;
+}
+.contact-box{
+  padding:36px 26px;
+  border-radius:16px;
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(18px);
+  transition:.35s;
+  text-decoration:none;
+  color:#fff;
+}
+.contact-box:hover{
+  transform:translateY(-8px);
+  border-color:var(--accent);
+  box-shadow:0 20px 60px rgba(0,255,255,.18);
+}
+.contact-box i{
+  font-size:34px;
+  color:var(--accent);
+  margin-bottom:16px;
+}
+.contact-box h3{margin-bottom:6px}
+.contact-box p{font-size:.9rem;opacity:.85}
+
+/* ---------- FOOTER ---------- */
+.glass-footer{
+  padding:20px;
+  margin-top:50px;
+  border-top:1px solid var(--glass-border);
+  background:rgba(255,255,255,0.06);
+}
+.footer-inner{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  gap: 10px;
+  flex-wrap:wrap; 
+}
+.footer-icons a {
+  font-size: 22px;   /* try 22–26px */
+  margin: 0 10px;
+  color:var(--accent);
+  transition: transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 12px rgba(0,230,230,0.6);
+}
+
+
+/* ---------- REVEAL SYSTEM (FIXED) ---------- */
+.section-title,
+.glass-card,
+.skill-card,
+.project-card,
+.contact-box{
+  opacity:1;
+  transform:none;
+}
+/*hide when JS is active */
+.js .section,
+.js .section-title,
+.js .glass-card,
+.js .skill-card,
+.js .project-card,
+.js .contact-box{
+  opacity:0;
+  transform:translateY(26px);
+  transition:all .7s cubic-bezier(.2,.9,.2,1);
+}
+
+.reveal{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px){
+  .nav-links{display:none}
+  .hero-card{padding:20px}
+}
+@media (max-width:520px){
+  .hero-avatar{width:120px;height:120px}
+  .hero-main{font-size:26px}
+}
+/* SAFETY: ensure contact cards are visible */
+.contact-section .contact-box {
+  opacity: 1;
+  transform: none;
+}
+
+
+

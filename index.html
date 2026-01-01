@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rahul Kumar Nayak — Portfolio</title>
+
+  <link rel="stylesheet" href="Rahul.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="glass-nav" id="nav">
+    <div class="nav-left">
+      <h2 class="logo">Rahul Kumar Nayak</h2>
+    </div>
+    <div class="nav-right nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO with optional background video -->
+  <header id="hero" class="hero">
+    <!-- Optional background video: replace assets/hero-bg.mp4 with your file or remove this block -->
+    <video class="hero-bg" autoplay muted loop playsinline>
+      <source src="assets/hero-bg.mp4" type="video/mp4">
+      <!-- fallback: keep a background image in CSS -->
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content glass-card hero-card">
+      <img src="/Rahul Kumar Nayak.jpg" alt="Rahul" class="hero-avatar">
+      <h1 class="hero-main">Programmer, Electrical Student</h1>
+      <p class="hero-typewriter" aria-live="polite"></p>
+
+      <div class="hero-cta">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn ghost" href="#contact">Contact</a>
+      </div>
+
+      <div class="hero-stats">
+  <div class="stat">
+    <div class="stat-num">7</div>
+    <div class="stat-label">Skills</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-num">Silicon</div>
+    <div class="stat-label">University</div>
+  </div>
+</div>
+
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 class="section-title">About</h2>
+    <div class="glass-card about-card">
+      <p>
+      I’m an Electrical Engineering student who enjoys exploring the intersection of engineering and software development. I like building clean user interfaces, understanding how things work under the hood, and solving problems step by step.
+
+I’m constantly learning, experimenting, and improving my skills, with the goal of becoming a well-rounded engineer who can contribute meaningfully to modern tech solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      <!-- Skill card + progress bar -->
+      
+      <div class="skill-card glass-card">
+        <div class="skill-head">
+          <div class="skill-name">C Programming</div><div class="skill-level">85%</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="80"></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass-card">
+        <div class="skill-head">
+          <div class="skill-name">Java</div><div class="skill-level">70%</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="75"></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass-card">
+        <div class="skill-head">
+          <div class="skill-name">Python Basics</div><div class="skill-level">30%</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="70"></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass-card">
+        <div class="skill-head">
+          <div class="skill-name">OOPS</div><div class="skill-level">70%</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="70"></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass-card">
+        <div class="skill-head">
+          <div class="skill-name">HTML/CSS</div><div class="skill-level">80%</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="80"></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass-card">
+        <div class="skill-head">
+          <div class="skill-name">JavaScript</div><div class="skill-level">65%</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="65"></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass-card">
+        <div class="skill-head">
+          <div class="skill-name">Frontend Basics</div><div class="skill-level">78%</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-fill="78"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- LANGUAGES -->
+<section id="languages" class="section">
+  <h2 class="section-title">Languages</h2>
+
+  <div class="languages-list">
+
+    <div class="language-card glass-card">
+      <div class="lang-left">
+        <span class="lang-icon blue">🎓</span>
+        <div>
+          <h3>English</h3>
+          <p>Fluent</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="language-card glass-card">
+      <div class="lang-left">
+        <span class="lang-icon blue">🎓</span>
+        <div>
+          <h3>Hindi</h3>
+          <p>Fluent</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="language-card glass-card">
+      <div class="lang-left">
+        <span class="lang-icon green">🎓</span>
+        <div>
+          <h3>Odia</h3>
+          <p>Native</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-coming">
+      Coming soon....
+      
+    </div>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal">
+    <div class="modal-inner glass-card">
+      <button class="modal-close"><i class="fa fa-times"></i></button>
+      <div class="modal-media"><img src="assets/p1.jpg" alt="project" id="modal-img"></div>
+      <div class="modal-content">
+        <h3 id="modal-title">Project Title</h3>
+        <p id="modal-desc">Project description goes here. Replace this with real project details.</p>
+        <div class="modal-links">
+          <a id="modal-github" href="#" target="_blank" class="btn ghost"><i class="fa fa-github"></i> Code</a>
+          <a id="modal-live" href="#" target="_blank" class="btn"><i class="fa fa-arrow-up-right-from-square"></i> Live</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="glass-card edu-card">
+      <ul>
+        <li><strong>Bachelor's of Technology in Electrical Engineering</strong> — Silicon University (2nd Year, Pursuing)</li>
+        <li><strong>12th (CBSE)</strong> — Mother’s Public School</li>
+        <li><strong>10th (CBSE)</strong> — Mother’s Public School</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+  <h2 class="section-title">Get In Touch</h2>
+
+  <p class="contact-subtext">
+    Hey, I'am Rahul - feel free to reach out for collaborations,projects, or a quick tech...
+  </p>
+
+  <div class="contact-cards">
+
+    <!-- Email -->
+    <div class="contact-box email-box" data-copy="rahulninja2004@gmail.com">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email</h3>
+      <p>rahulninja2004@gmail.com</p>
+    </div>
+
+    <!-- Phone -->
+    <div class="contact-box">
+      <i class="fa-solid fa-phone"></i>
+      <h3>Phone</h3>
+      <p>+91 700849251</p>
+    </div>
+
+    <!-- LinkedIn -->
+    <a class="contact-box" href="https://www.linkedin.com/in/rahul-nayak-ba5a1036b" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+      <h3>LinkedIn</h3>
+      <p>Connect with me ↗</p>
+    </a>
+
+    <!-- GitHub -->
+    <a class="contact-box" href="https://github.com/RahulNayak2127" target="_blank">
+      <i class="fa-brands fa-github"></i>
+      <h3>GitHub</h3>
+      <p>View my code ↗</p>
+    </a>
+
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="glass-footer">
+    <div class="footer-inner">
+      <div>© 2025 Rahul Kumar Nayak</div>
+      <div class="footer-icons">
+        <a href="https://github.com/RahulNayak2127" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rahul-nayak-ba5a1036b" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="first.js"></script>
+</body>
+</html>
+
